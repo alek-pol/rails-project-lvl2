@@ -28,6 +28,12 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# Rollbar for error tracking
+gem 'rollbar', '~>3.3'
+
+# Slim templates generator for Rails
+gem 'slim-rails'
+
 group :production do
   gem 'pg'
 end
@@ -35,10 +41,13 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker'
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rake', require: false
+  gem 'slim_lint', require: false
   # Use sqlite3 as the database for Active Record
-  gem 'rubocop-minitest', '~> 0.2'
-  gem 'rubocop-performance', '~> 1.14'
-  gem 'rubocop-rake', '~> 0.6'
   gem 'sqlite3', '~> 1.4'
 end
 
