@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# devise
+gem 'devise', '~> 4.8'
+gem 'devise-i18n', '~> 1.10'
+
 # Rollbar for error tracking
 gem 'rollbar', '~>3.3'
 
@@ -46,7 +50,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rake', require: false
-  gem 'slim_lint', require: false
+  gem 'slim_lint', '~> 0.22',  require: false
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
 end
@@ -58,7 +62,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'rubocop', '~> 1.3'
+  gem 'rubocop', '~> 1.3', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

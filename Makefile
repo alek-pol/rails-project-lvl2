@@ -1,3 +1,6 @@
+list:
+	@grep "^[^#[:space:]].*\:" Makefile
+
 setup:
 	bin/setup
 
