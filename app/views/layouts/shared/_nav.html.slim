@@ -4,7 +4,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
   #navbarSupportedContent.collapse
     ul.d-flex
       - if signed_in?
-        li.nav-item.active = link_to t('.sign_out'), destroy_user_session_path, class: 'nav-link', method: :delete
+        li.nav-item.active = link_to t('.sign_out'), destroy_user_session_path, method: :delete
       - else
-        li.nav-item.active = link_to t('.sign_in'), new_user_session_path, class: 'nav-link'
-        li.nav-item.active = link_to t('.register'), new_user_registration_path, class: 'nav-link'
+        li.nav-item.active = link_to t('.sign_in'), new_user_session_path
+        li.nav-item.active = link_to t('.register'), new_user_registration_path
