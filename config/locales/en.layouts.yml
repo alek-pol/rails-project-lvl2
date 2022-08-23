@@ -5,3 +5,5 @@ en:
         sign_out: Sign out
         sign_in: Sign in
         register: Sign up
+      footer:
+        source_code: Source code

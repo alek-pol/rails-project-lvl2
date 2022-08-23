@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: не может быть пустым
+            password:
+              blank: не может быть пустым
+              too_short: недостаточной длины (не может быть меньше %{count} символов)
+            password_confirmation:
+              confirmation: не может быть пустым

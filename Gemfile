@@ -35,6 +35,9 @@ gem 'devise-i18n', '~> 1.10'
 # Rollbar for error tracking
 gem 'rollbar', '~>3.3'
 
+# Form render
+gem 'simple_form', '~>5.1'
+
 # Slim templates generator for Rails
 gem 'slim-rails'
 

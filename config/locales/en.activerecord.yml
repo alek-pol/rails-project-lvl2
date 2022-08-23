@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: should be filled
+            password:
+              blank: should be filled
+              too_short: is too short (minimum is %{count} characters)
+            password_confirmation:
+              confirmation: should be filled

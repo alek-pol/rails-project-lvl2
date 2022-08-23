@@ -1,0 +1,11 @@
+doctype html
+html.h-100 lang="en"
+  head
+    = render 'layouts/shared/head'
+  body.d-flex.flex-column.h-100
+    = render 'layouts/shared/nav'
+    main.container.flex-shrink-0.my-4
+      .row.my-3
+        .col-lg-5.col-md-5.mx-auto
+          = yield
+    = render 'layouts/shared/footer'

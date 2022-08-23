@@ -1,14 +1,8 @@
 doctype html
-html
+html.h-100 lang="en"
   head
-    title
-      | CollectiveBlog
-    meta[name="viewport" content="width=device-width,initial-scale=1"]
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    = render 'layouts/shared/nav'
-    = render 'layouts/shared/flash'
-    = yield
+    = render 'layouts/shared/head'
+    body.d-flex.flex-column.h-100
+      = render 'layouts/shared/nav'
+
+      = render 'layouts/shared/footer'

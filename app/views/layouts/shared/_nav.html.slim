@@ -1,10 +1,11 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  = link_to t('title'), root_path, class: 'navbar-brand'
-
-  #navbarSupportedContent.collapse
-    ul.d-flex
+.container
+  header.d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-md-between.py-3.mb-4.border-bottom
+    a.d-flex.align-items-center.mb-2.mb-md-0.me-5.text-dark.text-decoration-none.fs-4(href="/") = t('title')
+    ul.nav.me-auto
+      / = nav_menu_item t('title'), root_path
+    ul.nav.nav-pills
       - if signed_in?
         li.nav-item.active = link_to t('.sign_out'), destroy_user_session_path, method: :delete
       - else
-        li.nav-item.active = link_to t('.sign_in'), new_user_session_path
-        li.nav-item.active = link_to t('.register'), new_user_registration_path
+        = nav_menu_item t('.sign_in'), new_user_session_path
+        = nav_menu_item t('.register'), new_user_registration_path

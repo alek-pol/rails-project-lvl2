@@ -5,3 +5,6 @@ ru:
         sign_in: Войти
         sign_out: Выйти
         register: Регистрация
+        minimum_password_length: "минимум %{length} символов"
+      footer:
+        source_code: Исходный код
