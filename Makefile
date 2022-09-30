@@ -1,6 +1,12 @@
 list:
 	@grep "^[^#[:space:]].*\:" Makefile
 
+db-reset:
+	bin/rails db:drop
+	bin/rails db:create
+	bin/rails db:migrate
+	#bin/rails db:fixtures:load
+
 setup:
 	bin/setup
 

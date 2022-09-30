@@ -1,0 +1,23 @@
+en:
+  helpers:
+    submit:
+      create: Create Post
+      update: Update Post
+  posts:
+    form:
+      select_category: 'Select a category'
+      create_post: Create Post
+    show:
+      all_posts: All Posts
+      edit_post: Edit
+      delete_post: Delete
+      confirm: Are your sure?
+    create:
+      success: Post was successfully created.
+      error: Post creation unsuccessfully.
+    update:
+      success: Post was successfully updated.
+      error: Post updated unsuccessfully.
+    destroy:
+      success: Post was successfully destroyed.
+      error: Post deleted unsuccessfully

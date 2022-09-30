@@ -1,0 +1,21 @@
+/ .d-flex.align-items-center.justify-content-between
+.container.my-4
+  h1 = t('title')
+  .row
+    - @posts.each do |post|
+      .col-md-12
+        .card.mb-3
+          .card-body
+            .h5.card-title
+              .d-flex.justify-content-between
+                = link_to post.title, post, class: 'text-decoration-none link-dark'
+                small.text-muted
+                  = post.category.name
+            .card-text
+              = truncate post.body, length: 500
+          .card-footer
+            .d-flex.justify-content-between
+              small.text-muted.mt-auto
+                = distance_of_time_in_words_to_now post.created_at
+              small.text-muted.mt-auto
+                =< post.creator.email

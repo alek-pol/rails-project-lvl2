@@ -6,5 +6,6 @@ ru:
         sign_out: Выйти
         register: Регистрация
         minimum_password_length: "минимум %{length} символов"
+        new_post: Добавить статью
       footer:
         source_code: Исходный код

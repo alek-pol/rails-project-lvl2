@@ -1,8 +1,10 @@
 doctype html
-html.h-100 lang="en"
+html.h-100 lang="#{I18n.locale}"
   head
     = render 'layouts/shared/head'
     body.d-flex.flex-column.h-100
       = render 'layouts/shared/nav'
-
+      = render 'layouts/shared/flash'
+      main.container.wrapper.flex-grow-1
+        == yield
       = render 'layouts/shared/footer'

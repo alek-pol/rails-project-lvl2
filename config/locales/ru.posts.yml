@@ -1,0 +1,27 @@
+ru:
+  helpers:
+    submit:
+      create: Создать статью
+      update: Обновить статью
+  posts:
+    edit:
+      form:
+        submit: !!!
+        create_post: Создать статью!
+    form:
+      select_category: Выберите категорию
+      create_post: Создать статью
+    show:
+      all_posts: Все статьи
+      edit_post: Редактировать
+      delete_post: Удалить
+      confirm: Вы уверены?
+    create:
+      success: Статья опубликована.
+      error: Невозможно создать статью.
+    update:
+      success: Статья обновлена.
+      error: Невозможно обновить статью.
+    destroy:
+      success: Статья удалена.
+      error: Невозможно удалить статью.

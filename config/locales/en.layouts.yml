@@ -5,5 +5,6 @@ en:
         sign_out: Sign out
         sign_in: Sign in
         register: Sign up
+        new_post: Create post
       footer:
         source_code: Source code
