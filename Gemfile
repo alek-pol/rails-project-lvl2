@@ -41,6 +41,8 @@ gem 'simple_form', '~>5.1'
 # Slim templates generator for Rails
 gem 'slim-rails'
 
+gem 'net-smtp'
+
 group :production do
   gem 'pg'
 end
