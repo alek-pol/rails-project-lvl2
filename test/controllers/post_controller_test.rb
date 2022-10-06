@@ -6,9 +6,8 @@ class PostControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @post = posts(:one)
-
     sign_in users(:one)
+    @post = posts(:one)
 
     @title       = Faker::Books::Dune.title
     @post_params = {

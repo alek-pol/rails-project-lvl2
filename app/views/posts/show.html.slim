@@ -17,3 +17,30 @@ dt.d-flex.justify-content-between.mt-1
   = link_to t('.delete_post'), post_path(@post), method: :delete, data: { confirm: t('.confirm') }, class: 'btn btn-danger'
 
 = link_to t('back'), posts_path, class: 'btn btn-outline-primary mt-3'
+
+hr
+  .mb-3
+    = t('.comments')
+    - if user_signed_in?
+      = render 'posts/comments/form', url: post_comments_path(@post), post: @post, comment: @post.comments.build
+
+    - if @post.comments.roots.any?
+      - @post.comments.roots.each do |post_comment|
+        .card.mb-3
+          .card-header
+            .d-flex.justify-content-between
+              small.text-muted.mt-auto = post_comment.creator.email
+              small.text-muted.mt-auto = distance_of_time_in_words_to_now post_comment.created_at
+          .card-body
+            = post_comment.content
+            - if post_comment.has_children?
+              - post_comment.children.each do |child_comment|
+                = render 'posts/comments/show', post_comment: child_comment
+          .card-footer
+            a.d-block.small.text-muted[data-bs-toggle="collapse" href="#new-post-comment-#{post_comment.id}"]
+              = t('.answer')
+            .collapse[data-bs-target="#new-post-comment-#{post_comment.id}" id="new-post-comment-#{post_comment.id}"]
+              - if user_signed_in?
+                = render 'posts/comments/form', url: post_comments_path(@post), post: @post, comment: @post.comments.build, parent_id: post_comment.id
+              - else
+                = render 'posts/comments/requires'

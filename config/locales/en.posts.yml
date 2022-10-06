@@ -5,13 +5,15 @@ en:
       update: Update Post
   posts:
     form:
-      select_category: 'Select a category'
+      select_category: Select a category
       create_post: Create Post
     show:
       all_posts: All Posts
       edit_post: Edit
       delete_post: Delete
       confirm: Are your sure?
+      comments: Comments
+      answer: Answer
     create:
       success: Post was successfully created.
       error: Post creation unsuccessfully.
@@ -21,3 +23,17 @@ en:
     destroy:
       success: Post was successfully destroyed.
       error: Post deleted unsuccessfully
+    comments:
+      form:
+        create_comment: Create comment
+      show:
+        answer: Answer
+      create:
+        success: Comment was successfully created.
+        error: Comment creation unsuccessfully.
+      destroy:
+        success: Comment was successfully destroyed.
+        error: Comment deleted unsuccessfully
+      requires:
+        requires: This action requires
+        sign_in: sign in

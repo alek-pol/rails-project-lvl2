@@ -1,0 +1,23 @@
+hr.my-2
+  div[id="comment-#{post_comment.id}"]
+    .d-flex.justify-content-between
+      small.text-muted.mt-0
+        = post_comment.creator.email
+      small.text-muted.mt-0
+        = distance_of_time_in_words_to_now post_comment.created_at
+    small.mr-2
+      = post_comment.content
+  hr.my-2
+  div
+    .mb-2
+      a.d-block.small.text-muted[data-bs-toggle="collapse" href="#new-post-comment-#{post_comment.id}"]
+        small = t('.answer')
+      .collapse[data-bs-target="#new-post-comment-#{post_comment.id}" id="new-post-comment-#{post_comment.id}"]
+        - if user_signed_in?
+          = render 'posts/comments/form', url: post_comments_path(@post), post: @post, comment: @post.comments.build, parent_id: post_comment.id
+        - else
+          = render 'posts/comments/requires'
+      - if post_comment.has_children?
+        .ms-3
+          - post_comment.children.each do |child_comment|
+            = render 'posts/comments/show', post_comment: child_comment
