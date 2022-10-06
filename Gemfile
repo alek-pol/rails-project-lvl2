@@ -42,6 +42,7 @@ gem 'simple_form', '~>5.1'
 gem 'slim-rails'
 
 gem 'net-smtp'
+gem 'ancestry'
 
 group :production do
   gem 'pg'
