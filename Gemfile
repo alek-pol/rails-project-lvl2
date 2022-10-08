@@ -42,6 +42,7 @@ gem 'simple_form', '~>5.1'
 gem 'slim-rails'
 
 gem 'ancestry'
+gem 'net-pop'
 gem 'net-smtp'
 
 group :production do
