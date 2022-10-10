@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
@@ -42,9 +42,9 @@ gem 'simple_form', '~>5.1'
 gem 'slim-rails'
 
 gem 'ancestry'
-gem 'net-imap'
-gem 'net-pop'
-gem 'net-smtp'
+# gem 'net-imap'
+# gem 'net-pop'
+# gem 'net-smtp'
 
 group :production do
   gem 'pg'
