@@ -1,6 +1,10 @@
 list:
 	@grep "^[^#[:space:]].*\:" Makefile
 
+install:
+	bundle install
+	yarn install
+
 db-reset:
 	bin/rails db:drop
 	bin/rails db:create

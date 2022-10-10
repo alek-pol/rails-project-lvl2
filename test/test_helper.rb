@@ -21,7 +21,7 @@ class RoutingTest < ActionDispatch::IntegrationTest
     controller = Regexp.last_match(1)
     action     = Regexp.last_match(2)
 
-    { controller: controller, action: action }
+    { controller:, action: }
   end
 
   def should_route(arg)
@@ -34,6 +34,6 @@ class RoutingTest < ActionDispatch::IntegrationTest
 
     method = Regexp.last_match(1).downcase.to_sym
     path   = Regexp.last_match(2)
-    assert_routing({ method: method, path: path }, options.merge(take_controller_action(arg)))
+    assert_routing({ method:, path: }, options.merge(take_controller_action(arg)))
   end
 end
