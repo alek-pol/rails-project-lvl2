@@ -7,7 +7,7 @@ class Posts::CommentsController < Posts::ApplicationController
   def create
     @comment = @post.comments.build(post_comment_params)
 
-    @comment.creator = current_user
+    @comment.user = current_user
 
     if @comment.save
       flash[:success] = t('.success')

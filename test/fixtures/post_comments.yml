@@ -7,33 +7,43 @@
 #  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  creator_id :integer          not null
 #  post_id    :integer          not null
+#  user_id    :integer          not null
 #
 # Indexes
 #
-#  index_post_comments_on_ancestry    (ancestry)
-#  index_post_comments_on_creator_id  (creator_id)
-#  index_post_comments_on_post_id     (post_id)
+#  index_post_comments_on_ancestry  (ancestry)
+#  index_post_comments_on_post_id   (post_id)
+#  index_post_comments_on_user_id   (user_id)
 #
 # Foreign Keys
 #
-#  creator_id  (creator_id => users.id)
-#  post_id     (post_id => posts.id)
+#  post_id  (post_id => posts.id)
+#  user_id  (user_id => users.id)
 #
 
 one:
+  id: 1
   content: Auctor urna nunc id cursus metus aliquam.
   post: one
-  creator: one
+  user: one
+
+nested:
+  id: 2
+  content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  user: one
+  post: one
+  ancestry: '1'
 
 two:
+  id: 3
   content: Egestas tellus rutrum tellus pellentesque eu.
   post: two
-  creator: two
+  user: two
 
-#two_ancestry_one:
-#  content: Mi bibendum neque egestas congue quisque egestas diam in arcu.
-#  post: two
-#  creator: two
-#  ancestry: two
+two_ancestry_one:
+  id: 4
+  content: Mi bibendum neque egestas congue quisque egestas diam in arcu.
+  post: two
+  user: two
+  ancestry: '2'

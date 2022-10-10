@@ -32,7 +32,7 @@ hr
           .card-header
             .d-flex.justify-content-between
               small.text-muted.mt-auto
-                = post_comment.creator.email
+                = post_comment.user.email
               small.text-muted.mt-auto
                 = distance_of_time_in_words_to_now post_comment.created_at
           .card-body

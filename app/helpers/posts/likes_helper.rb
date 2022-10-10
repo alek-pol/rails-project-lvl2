@@ -2,7 +2,7 @@
 
 module Posts::LikesHelper
   def current_user_like(post)
-    post.likes.find_by(creator: current_user)
+    post.likes.find_by(user: current_user)
   end
 
   def current_user_like?(post)

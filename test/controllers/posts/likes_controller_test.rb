@@ -21,7 +21,7 @@ class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to post_url(@post_two)
 
-    like = PostLike.find_by!(creator_id: @user.id, post_id: @post_two.id)
+    like = PostLike.find_by!(user_id: @user.id, post_id: @post_two.id)
 
     assert { like }
   end

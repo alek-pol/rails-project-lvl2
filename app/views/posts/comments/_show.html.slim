@@ -2,7 +2,7 @@ hr.my-2
   div[id="comment-#{post_comment.id}"]
     .d-flex.justify-content-between
       small.text-muted.mt-0
-        = post_comment.creator.email
+        = post_comment.user.email
       small.text-muted.mt-0
         = distance_of_time_in_words_to_now post_comment.created_at
     small.mr-2

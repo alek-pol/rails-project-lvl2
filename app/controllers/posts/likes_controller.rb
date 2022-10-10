@@ -6,7 +6,7 @@ class Posts::LikesController < Posts::ApplicationController
   def create
     @like = @post.likes.build
 
-    @like.creator = current_user
+    @like.user = current_user
 
     redirect_to @post if @like.save
   end
