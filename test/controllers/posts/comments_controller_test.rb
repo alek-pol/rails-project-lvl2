@@ -32,8 +32,7 @@ class Posts::CommentsControllerTest < ActionDispatch::IntegrationTest
     end
 
     comment = PostComment.find_by!(@post_comment)
-    p comment
-    pp PostComment.all
+
     assert_equal(comment.ancestry, @comment.id.to_s)
     assert_equal(@comment, PostComment.last.parent)
   end
