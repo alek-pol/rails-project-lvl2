@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  # GET /posts/1 or /posts/1.json
+  # GET /posts/1
   def show; end
 
   # GET /posts/new

@@ -1,6 +1,6 @@
 .container
 ol.breadcrumb
-  li.breadcrumb-item = link_to t('.all_posts'), posts_path
+  li.breadcrumb-item = link_to t('.all_posts'), root_path
   li.breadcrumb-item.active = @post.category.name
 
 h1.mb-2.mb-lg-4 = @post.title
@@ -11,6 +11,8 @@ hr.mt-4
 
 dt.d-flex.justify-content-between.mt-1
   span = @post.creator.email
+
+  = render 'posts/likes/show', post: @post
 
 .mt-3
   = link_to t('.edit_post'), edit_post_path(@post), class: 'btn btn-success me-2'
@@ -29,8 +31,10 @@ hr
         .card.mb-3
           .card-header
             .d-flex.justify-content-between
-              small.text-muted.mt-auto = post_comment.creator.email
-              small.text-muted.mt-auto = distance_of_time_in_words_to_now post_comment.created_at
+              small.text-muted.mt-auto
+                = post_comment.creator.email
+              small.text-muted.mt-auto
+                = distance_of_time_in_words_to_now post_comment.created_at
           .card-body
             = post_comment.content
             - if post_comment.has_children?
@@ -41,6 +45,7 @@ hr
               = t('.answer')
             .collapse[data-bs-target="#new-post-comment-#{post_comment.id}" id="new-post-comment-#{post_comment.id}"]
               - if user_signed_in?
-                = render 'posts/comments/form', url: post_comments_path(@post), post: @post, comment: @post.comments.build, parent_id: post_comment.id
+                = render 'posts/comments/form', url: post_comments_path(@post),
+                        post: @post, comment: @post.comments.build, parent_id: post_comment.id
               - else
                 = render 'posts/comments/requires'

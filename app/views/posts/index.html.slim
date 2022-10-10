@@ -7,7 +7,7 @@
           .card-body
             .h5.card-title
               .d-flex.justify-content-between
-                = link_to post.title, post, class: 'text-decoration-none link-dark'
+                = link_to post.title, post_path(post), class: 'text-decoration-none link-dark'
                 small.text-muted
                   = post.category.name
             .card-text
@@ -18,3 +18,6 @@
                 = distance_of_time_in_words_to_now post.created_at
               small.text-muted.mt-auto
                 =< post.creator.email
+              small.text-muted.mt-auto
+                = post.likes.size
+                i.bi-hand-thumbs-up.text-muted.link-secondary

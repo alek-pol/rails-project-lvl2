@@ -23,11 +23,17 @@
 #
 
 one:
-  content: MyText
+  content: Auctor urna nunc id cursus metus aliquam.
   post: one
   creator: one
 
 two:
-  content: MyText
+  content: Egestas tellus rutrum tellus pellentesque eu.
   post: two
   creator: two
+
+#two_ancestry_one:
+#  content: Mi bibendum neque egestas congue quisque egestas diam in arcu.
+#  post: two
+#  creator: two
+#  ancestry: two

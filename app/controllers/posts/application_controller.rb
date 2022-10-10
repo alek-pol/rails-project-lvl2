@@ -2,8 +2,10 @@
 
 module Posts
   class ApplicationController < ApplicationController
-    def set_post
-      @post = Post.find(params[:post_id])
+    before_action :authenticate_user!
+
+    def post
+      @post ||= Post.find(params[:post_id])
     end
   end
 end

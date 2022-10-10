@@ -30,3 +30,6 @@ one:
 
 two:
   <<: *DEFAULTS
+
+three:
+  <<: *DEFAULTS

@@ -1,0 +1,14 @@
+span.me-2
+  - if user_signed_in?
+    small = @post.likes.size
+
+    - if current_user_like?(@post)
+      = link_to post_like_path(@post, current_user_like(@post)), method: :delete do
+        i.bi-hand-thumbs-up-fill.link-secondary
+    - else
+      = link_to post_likes_path(@post), method: :post do
+        i.bi-hand-thumbs-up.link-secondary
+  - else
+    small.text-muted = @post.likes.size
+    = link_to new_user_session_path do
+      i.bi-hand-thumbs-up.text-muted.link-secondary

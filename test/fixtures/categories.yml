@@ -9,7 +9,7 @@
 #
 
 one:
-  name: MyString
+  name: development
 
 two:
-  name: MyString
+  name: business

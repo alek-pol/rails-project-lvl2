@@ -27,6 +27,7 @@ class Post < ApplicationRecord
   belongs_to :category
 
   has_many :comments, class_name: 'PostComment', dependent: :destroy, inverse_of: :post
+  has_many :likes, class_name: 'PostLike', dependent: :destroy, inverse_of: :post
 
   validates :title, presence: true
   validates :body, presence: true

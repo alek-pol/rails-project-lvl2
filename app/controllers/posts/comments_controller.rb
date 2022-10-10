@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-class Posts::CommentsController < ApplicationController
+class Posts::CommentsController < Posts::ApplicationController
   before_action :post, only: :create
-  # before_action :authenticate_user!, only: %i[create new]
 
   # POST /post_comments
   def create
@@ -23,9 +22,5 @@ class Posts::CommentsController < ApplicationController
 
   def post_comment_params
     params.require(:post_comment).permit(:content, :parent_id)
-  end
-
-  def post
-    @post ||= Post.find(params[:post_id])
   end
 end

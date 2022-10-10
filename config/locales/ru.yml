@@ -1,11 +1,8 @@
 ru:
   title: Коллективный блог
   posts:
-#    index:
-#      title: Коллективный блог
     new:
       title: Добавить статью
-
   datetime:
     distance_in_words:
       about_x_hours:

@@ -31,12 +31,8 @@
 
 en:
   title: Collective Blog
-#  posts:
-#    index:
-#      title: Collective blog
-#    new:
-#      title: New Post
-
+  posts:
+    title: New Post
   categories:
     create:
       success: 'Category was successfully created.'

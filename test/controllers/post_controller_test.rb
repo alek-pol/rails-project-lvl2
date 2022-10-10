@@ -21,7 +21,6 @@ class PostControllerTest < ActionDispatch::IntegrationTest
     get posts_path
 
     assert_response :success
-    # assert_select 'h1', 'Коллективный блог'
   end
 
   test 'should get new' do
