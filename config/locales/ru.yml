@@ -1,5 +1,6 @@
 ru:
   title: Коллективный блог
+  application_name: Блог
   posts:
     new:
       title: Добавить статью

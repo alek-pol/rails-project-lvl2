@@ -31,6 +31,7 @@
 
 en:
   title: Collective Blog
+  application_name: Blog
   posts:
     title: New Post
   categories:

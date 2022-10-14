@@ -1,13 +1,28 @@
 ru:
   activerecord:
+    attributes:
+      post:
+        title: Title
+        body: Content
+        category: Category
     errors:
       models:
         user:
           attributes:
             email:
-              blank: should be filled
+              blank: cant'be blank
+              invalid: has a wrong format
+              taken: has been taken
             password:
               blank: should be filled
               too_short: is too short (minimum is %{count} characters)
             password_confirmation:
               confirmation: should be filled
+        post:
+          attributes:
+            title:
+              blank: cant'be blank
+            body:
+              blank: cant'be blank
+            category:
+              required: not be absent

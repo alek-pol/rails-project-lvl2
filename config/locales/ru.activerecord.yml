@@ -1,13 +1,28 @@
 ru:
   activerecord:
+    attributes:
+      post:
+        title: Название
+        body: Содержание
+        category: Категория
     errors:
       models:
         user:
           attributes:
             email:
               blank: не может быть пустым
+              invalid: имеет неверное значение
+              taken: с таким именем уже существует
             password:
               blank: не может быть пустым
               too_short: недостаточной длины (не может быть меньше %{count} символов)
             password_confirmation:
               confirmation: не может быть пустым
+        post:
+          attributes:
+            title:
+              blank: не может быть пустым
+            body:
+              blank: не может быть пустым
+            category:
+              required: не может отсутствовать

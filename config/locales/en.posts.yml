@@ -15,13 +15,13 @@ en:
       comments: Comments
       answer: Answer
     create:
-      success: Post was successfully created.
-      error: Post creation unsuccessfully.
+      success: Post was successfully created
+      error: Post creation unsuccessfully
     update:
-      success: Post was successfully updated.
-      error: Post updated unsuccessfully.
+      success: Post was successfully updated
+      error: Post updated unsuccessfully
     destroy:
-      success: Post was successfully destroyed.
+      success: Post was successfully destroyed
       error: Post deleted unsuccessfully
     comments:
       form:
@@ -29,10 +29,10 @@ en:
       show:
         answer: Answer
       create:
-        success: Comment was successfully created.
-        error: Comment creation unsuccessfully.
+        success: Comment was successfully created
+        error: Comment ccant'be blank
       destroy:
-        success: Comment was successfully destroyed.
+        success: Comment was successfully destroyed
         error: Comment deleted unsuccessfully
       requires:
         requires: This action requires

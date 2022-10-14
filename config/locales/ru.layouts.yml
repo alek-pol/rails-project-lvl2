@@ -5,7 +5,8 @@ ru:
         sign_in: Войти
         sign_out: Выйти
         register: Регистрация
+        forgot_your_password: Забыли пароль?
         minimum_password_length: "минимум %{length} символов"
         new_post: Добавить статью
       footer:
-        source_code: Исходный код
+        source_code: " Исходный код"

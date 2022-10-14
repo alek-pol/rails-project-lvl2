@@ -19,8 +19,12 @@
 #
 #  post_id  (post_id => posts.id)
 #  user_id  (user_id => users.id)
-#
+
+# rubocop:disable Rails/UniqueValidationWithoutIndex
 class PostLike < ApplicationRecord
   belongs_to :user
   belongs_to :post
+
+  validates :post_id, uniqueness: { scope: :user_id }
 end
+# rubocop:enable Rails/UniqueValidationWithoutIndex

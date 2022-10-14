@@ -4,13 +4,15 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create edit update]
   before_action :set_post, only: %i[show edit update destroy]
 
-  # GET /posts or /posts.json
+  # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   # GET /posts/1
-  def show; end
+  def show
+    @user_like = @post.likes.find_by(user: current_user)
+  end
 
   # GET /posts/new
   def new

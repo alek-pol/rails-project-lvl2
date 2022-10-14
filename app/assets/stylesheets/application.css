@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.img-vector:not(:hover) {
+  transition: 2s;
+  filter: saturate(0%);
+  -webkit-filter: saturate(0%);
+}
+.img-vector:hover {
+  transition: 1s;
+}
+
+.bi-vector-pen:hover {
+  color: red
+  /*!important;*/
+}

@@ -1,9 +1,13 @@
 h2
   = t('.sign_in')
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  - if flash[:alert]
+    .alert.alert-dismissible.show.fade class="alert-danger"
+      = flash[:alert]
+      .btn-close[ aria-label="Close" data-bs-dismiss="alert" ]
   .form-inputs
     .mb-3
-      = f.input :email, autofocus: true, input_html: { autocomplete: 'email' }
+      = f.input :email, required: true, autofocus: true, input_html: { autocomplete: 'email' }, value: '0'
     .mb-3
       = f.input :password, input_html: { autocomplete: 'current-password' }
     .mb-3

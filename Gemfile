@@ -41,10 +41,8 @@ gem 'simple_form', '~>5.1'
 # Slim templates generator for Rails
 gem 'slim-rails'
 
+# Organised as a tree structure (or hierarchy)
 gem 'ancestry'
-# gem 'net-imap'
-# gem 'net-pop'
-# gem 'net-smtp'
 
 group :production do
   gem 'pg'

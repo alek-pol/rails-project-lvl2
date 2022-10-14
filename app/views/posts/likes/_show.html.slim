@@ -1,13 +1,12 @@
 span.me-2
   - if user_signed_in?
-    small = @post.likes.size
-
+    small = @post.likes.count
     - if current_user_like?(@post)
-      = link_to post_like_path(@post, current_user_like(@post)), method: :delete do
-        i.bi-hand-thumbs-up-fill.link-secondary
+      = link_to post_like_path(@post, current_user_like(@post)), method: :delete, class: 'text-decoration-none' do
+        span.bi.bi-hand-thumbs-up-fill.text-secondary
     - else
-      = link_to post_likes_path(@post), method: :post do
-        i.bi-hand-thumbs-up.link-secondary
+      = link_to post_likes_path(@post), method: :post, class: 'text-decoration-none' do
+        span.bi.bi-hand-thumbs-up.text-secondary
   - else
     small.text-muted = @post.likes.size
     = link_to new_user_session_path do

@@ -1,5 +1,5 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
-
+#ru.devise.sessions.new.email">Email</
 ru:
   devise:
     confirmations:
@@ -20,7 +20,7 @@ ru:
       confirmation_instructions:
         subject: "Инструкции по подтверждению учётной записи."
       reset_password_instructions:
-        subject: "Инструкции по восстановлению пароля."
+        subject: "Инструкция по восстановлению пароля."
       unlock_instructions:
         subject: "Инструкции по разблокировке учётной записи."
       email_changed:
@@ -31,6 +31,10 @@ ru:
       failure: "Вы не можете войти в систему с учётной записью из %{kind}, так как \"%{reason}\"."
       success: "Вход в систему выполнен с учётной записью из %{kind}."
     passwords:
+      new:
+        send_instructions: Выслать новый пароль
+      edit:
+        change_my_password: Изменить мой пароль
       no_token: "Эта страница доступна только при переходе с email для сброса пароля. Если Вы перешли по ссылке из письма, пожалуйста, убедитесь, что вы использовали полный URL."
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по восстановлению вашего пароля."
       send_paranoid_instructions: "Если ваш адрес email есть в нашей базе данных, то в течение нескольких минут Вы получите письмо с инструкциями по восстановлению вашего пароля."
@@ -53,6 +57,8 @@ ru:
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашей учётной записи."
       send_paranoid_instructions: "Если ваша учётная запись существует, то в течение нескольких минут вы получите письмо с инструкциями по её разблокировке."
       unlocked: "Ваша учётная запись разблокирована. Теперь вы вошли в систему."
+    shared:
+      minimum_password_length: (минимум %{count} знаков)
   errors:
     messages:
       already_confirmed: "уже подтверждена. Пожалуйста, попробуйте войти в систему"

@@ -17,16 +17,11 @@
 #
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
-#
+
 class User < ApplicationRecord
   has_many :posts, foreign_key: 'creator_id', dependent: :destroy, inverse_of: :creator
   has_many :comments, class_name: 'PostComment', dependent: :destroy
   has_many :likes, class_name: 'PostLike', dependent: :destroy
-
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  # validates :email, presence: true
-  # validates :password, presence: true, length: { minimum: 6 }
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 end

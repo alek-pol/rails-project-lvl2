@@ -1,5 +1,6 @@
 - if flash.any?
   .container.my-2
-    - flash.each do |_type, msg|
-      .alert.alert-info
-        = msg
+    - flash.each do |type, message|
+      .alert.alert-dismissible.show.fade class="#{flash_color(type)}"
+        = message
+        .btn-close[ aria-label="Close" data-bs-dismiss="alert" ]

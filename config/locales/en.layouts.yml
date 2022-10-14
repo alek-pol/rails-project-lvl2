@@ -5,7 +5,8 @@ en:
         sign_in: Sign in
         sign_out: Sign out
         register: Sign up
+        forgot_your_password: Forgot your password?
         minimum_password_length: "minimum %{length} symbols"
         new_post: Create post
       footer:
-        source_code: Source code
+        source_code: " Source code"

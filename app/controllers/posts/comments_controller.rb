@@ -13,8 +13,8 @@ class Posts::CommentsController < Posts::ApplicationController
       flash[:success] = t('.success')
       redirect_to @post
     else
-      flash[:success] = t('.error')
-      render 'posts/show', status: :unprocessable_entity
+      flash[:alert] = t('.error')
+      redirect_to post_path(@post)
     end
   end
 

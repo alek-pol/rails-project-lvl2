@@ -18,4 +18,14 @@ module ApplicationHelper
       end
     end
   end
+
+  def flash_color(type)
+    {
+      success: 'alert-success',
+      notice: 'alert alert-info',
+      alert: 'alert-danger',
+      danger: 'alert-danger',
+      error: 'alert-danger'
+    }[type.to_sym] || 'alert-warning'
+  end
 end
