@@ -27,23 +27,11 @@ one:
   content: Auctor urna nunc id cursus metus aliquam.
   post: one
   user: one
+  ancestry:
 
 nested:
   id: 2
   content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
   user: one
-  post: one
+  post: with_comments
   ancestry: '1'
-
-two:
-  id: 3
-  content: Egestas tellus rutrum tellus pellentesque eu.
-  post: two
-  user: two
-
-two_ancestry_one:
-  id: 4
-  content: Mi bibendum neque egestas congue quisque egestas diam in arcu.
-  post: two
-  user: two
-  ancestry: '2'

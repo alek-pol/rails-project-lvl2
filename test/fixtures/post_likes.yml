@@ -26,7 +26,3 @@ one:
 two:
   post: two
   user: two
-
-three:
-  post: two
-  user: three

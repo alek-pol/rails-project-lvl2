@@ -22,14 +22,13 @@
 # below each fixture, per the syntax in the comments below
 
 DEFAULTS: &DEFAULTS
-  email: $LABEL@test.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 one:
   <<: *DEFAULTS
+  email: $LABEL@email.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 two:
   <<: *DEFAULTS
-
-three:
-  <<: *DEFAULTS
+  email: $LABEL@email.com

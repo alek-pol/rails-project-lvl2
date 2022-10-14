@@ -32,3 +32,9 @@ two:
   body: Aliquet bibendum enim facilisis gravida neque.
   creator: two
   category: two
+
+with_comments:
+  title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  body: Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+  creator: two
+  category: two
