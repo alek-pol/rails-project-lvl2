@@ -45,6 +45,7 @@ gem 'slim-rails'
 gem 'ancestry'
 
 group :production do
+  gem 'faker'
   gem 'pg'
 end
 
