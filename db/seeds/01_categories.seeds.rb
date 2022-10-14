@@ -8,4 +8,6 @@ rows = [
 Category.transaction(requires_new: true) do
   Category.destroy_all
   Category.create!(rows)
+
+  @categories_id = Category.ids
 end
